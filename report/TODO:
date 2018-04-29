@@ -1,0 +1,108 @@
+TODO: 
+
+Sources of pitch:
+	- praat
+	- aubio
+
+Raag classes:
+	- Bihag
+	- Desh
+	- Gaud Malhar
+	- Darbari
+	- Yaman
+
+- Training data {pittu (srd), sugato (str)}
+- Testing data {nayan (str), manilal (str), falguni (v)}
+
+Params to tweak:
+- No pitch present? 
+	- C
+--	- continue the previous note
+	- skip them completely
+- Remove C completey? (Sympathetic strings)
+- Sources of pitch?
+- incorporate amplitude and quantize using k means? k? (if i have time?)
+- Incorporate aaroh, avroh, pakad?	
+
+
+
+models									programmed		simluating 	simulted
+- basic										-				-72			- 36
+- with previous note continued				-				-36
+- remove 0s completely						-				-36
+
+- incorporating aaroh, avroh, pakad
+- incorporate amplitude
+
+Key points:
+- multi modal raag identification
+- same thaat
+
+results
+- cv
+- test set
+
+future work: 
+- extend the data set, especially training
+- incorporate explicit aaroh, avroh, pakad and increase its weight
+- use better pitch detection algorithms. try to remove the sympathetic string sound/drone sound so that HMM can learn the transition probabilites between the notes better than the transition to the tonic frequency pitch
+- incorporate more feautres like amplitude and quantize kmeans
+
+
+
+
+-----------------------------------------------------------------------
+PPT
+
+Raag detection
+
+1. What is a raag?
+
+2. Why do I care?
+
+3. Characteristic elements of a raag
+
+4. Algorithm:
+	- Dataset: GTraagDB
+	- Feature extraction and quantization(pitch detection)
+	- 
+
+5. Dataset: GTraagDB
+	- http://prernagupta.com/parag/data/GTraagDB/
+	- Consists of 31 raags assembled by Parag Chordia
+	- Recordings include either vocals or instruments. 
+	- Training set: 5 raag classes 
+		- Bihag
+		- Darbari
+		- Desh
+		- Gaud Malhar
+		- Yaman
+	- 3 samples each of sitar and sarod (indian classical instruments)
+	- Test set: 16 samples consisting of sitar and vocal recordings.
+
+6. Feature extraction and quantization
+	- Pitch detection using Praat
+	- Quantize pitch frequency to nearest 
+	TODO: insert c.mp3
+
+
+
+-------------------------------------------------------------------
+- Intro
+- Motivation
+- Previous work
+- Method
+	- DB
+	- Feature extraction
+	- Learning: baum welch
+	- Testing
+- Result
+- Conclusion & Future work
+
+
+
+ref:
+- praat: http://xeds.eu/other/P_Boersma_Accurate_short-term_analysis_of_the_fundametnal_freq.pdf
+- http://dafx10.iem.at/proceedings/papers/VonDemKnesebeckZoelzer_DAFx10_P102.pdf
+
+

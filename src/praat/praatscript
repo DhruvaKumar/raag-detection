@@ -1,0 +1,15 @@
+fileName$ = "cpraat.txt"
+writeFile: "'fileName$'", ""
+numberOfFrames = Get number of frames
+for iframe to numberOfFrames
+    time = Get time from frame: iframe
+    pitch = Get value in frame: iframe, "Hertz"
+    if pitch = undefined
+       #appendInfoLine: fixed$ (time, 6), " nan"
+	appendFileLine: "'fileName$'", fixed$ (time, 6), " 0"
+    else
+       #appendInfoLine: fixed$ (time, 6), " ", fixed$ (pitch, 3)
+	appendFileLine: "'fileName$'", fixed$ (time, 6), " ", fixed$ (pitch, 3)
+    endif
+endfor
+#appendFile: "out.txt", info$( )

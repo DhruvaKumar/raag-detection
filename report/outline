@@ -1,0 +1,38 @@
+- Intro
+- Motivation
+- Previous work
+- Method
+	- DB
+	- Feature extraction and quantization
+	- Learning: baum welch
+- Result
+- Conclusion & Future work
+
+
+----------------------------------------
+plots and tables:
+table
+feature extraction
+	- raag class for training and melodic notes wrt tonic freq C
+
+
+
+plot
+feature extraction
+	- octaves chosen in the chromatic scale
+
+learning
+	- convergence criteria
+
+results
+	- confusion matrix
+	- log_p (yaman) correct
+	- log_p (darbari) wrong
+
+
+
+Bib
+- rabiner
+- gt raagDB
+- parag
+- tansen
